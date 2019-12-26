@@ -43,7 +43,7 @@ export class PushService {
     // Obtener id del subscriptor
     this.oneSignal.getIds().then(info => {
       this.userId = info.userId;
-      console.log("UserId", this.userId);
+      console.log('UserId', this.userId);
     });
 
     this.oneSignal.endInit();
