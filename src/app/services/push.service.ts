@@ -69,4 +69,11 @@ export class PushService {
     this.mensajes = await this.storage.get('mensajes') || [];
     return this.mensajes;
   }
+
+  async borrarMensajes() {
+    await this.storage.clear();
+    // this.storage.remove('mensajes');
+    this.mensajes = [];
+    await this.guardarMensajes();
+  }
 }
