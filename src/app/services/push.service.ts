@@ -17,7 +17,7 @@ export class PushService {
 
    async getMensajes() {
      await this.cargarMensajes();
-     return this.mensajes;
+     return [...this.mensajes];
    }
 
   consfiguracionInicial() {
